@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export default function Navigation() {
   return (
     <nav>
-      <ul>
+      <NavList>
         <li>
           <StyledNavElement></StyledNavElement>
         </li>
@@ -16,10 +16,16 @@ export default function Navigation() {
         <li>
           <StyledNavElement></StyledNavElement>
         </li>
-      </ul>
+      </NavList>
     </nav>
   );
 }
+
+const NavList = styled.ul`
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+`;
 
 const StyledNavElement = styled.div`
   height: 40px;
