@@ -8,12 +8,6 @@ export default function useFetch(urlToFetch, arrayProp) {
       const response = await fetch(urlToFetch);
       const data = await response.json();
       setPersons(data.results);
-      // if (arrayProp) {
-      //   setState(data[arrayProp]);
-      // } else {
-      //   setState(data);
-      // }
-      console.log(fetchData);
     }
     fetchData();
   }, [urlToFetch, arrayProp]);

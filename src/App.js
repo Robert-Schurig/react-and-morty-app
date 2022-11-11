@@ -7,7 +7,7 @@ import useFetch from './components/hooks/useFetch';
 
 function App() {
   const [persons, setPersons] = useFetch('https://rickandmortyapi.com/api/character', 'results');
-  console.log(persons[0]);
+
   return (
     <div className="App">
       {persons.map(({ id, name, image }) => {
