@@ -13,5 +13,14 @@ export default function Card() {
 }
 
 const CardElement = styled.article`
+  display: inline-block;
+  height: 40vh;
   border: 1px solid black;
+  padding: 20px;
+  background-color: darkgray;
+  border-radius: 10%;
+`;
+
+const Image = styled.div`
+  padding: 15px;
 `;
