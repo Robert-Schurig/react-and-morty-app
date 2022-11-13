@@ -11,6 +11,7 @@ export default function Header() {
 const AppHeader = styled.header`
   background-color: purple;
   height: 10vh;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
