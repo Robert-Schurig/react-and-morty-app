@@ -1,36 +1,27 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Navigation() {
   return (
-    <nav>
-      <NavList>
-        <li>
-          <StyledNavElement></StyledNavElement>
-        </li>
-        <li>
-          <StyledNavElement></StyledNavElement>
-        </li>
-        <li>
-          <StyledNavElement></StyledNavElement>
-        </li>
-        <li>
-          <StyledNavElement></StyledNavElement>
-        </li>
-      </NavList>
-    </nav>
+    <NavContainer>
+      <NavigationItem to="/">Homepage</NavigationItem>
+
+      <NavigationItem to="/favorites">Favorites</NavigationItem>
+
+      <NavigationItem to="/random">Random</NavigationItem>
+    </NavContainer>
   );
 }
 
-const NavList = styled.ul`
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
+const NavigationItem = styled(Link)`
+  text-decoration: none;
 `;
 
-const StyledNavElement = styled.div`
-  height: 40px;
-  width: 40px;
-  padding: 20px;
-  border-radius: 50%;
-  background-color: purple;
+const NavContainer = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  background-color: yellow;
 `;

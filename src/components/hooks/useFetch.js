@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 
-export default function useFetch(urlToFetch, arrayProp) {
+export default function useFetch(url) {
   const [persons, setPersons] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(urlToFetch);
+      const response = await fetch(url);
       const data = await response.json();
       setPersons(data.results);
     }
     fetchData();
-  }, [urlToFetch, arrayProp]);
+  }, [url]);
 
   return [persons, setPersons];
 }
